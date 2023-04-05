@@ -7,6 +7,10 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 module.exports = {
     mode: modoDev ? 'development' : 'production',
     entry: './src/principal.js',
+    devServer: {
+        contentBase: './public',
+        port: 9000
+    },
     output: {
         filename: 'principal.js',
         path: __dirname + '/public'
